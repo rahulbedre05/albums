@@ -1,0 +1,24 @@
+<h2>My photos Services</h2>
+<table border="1px">
+  <tr>
+      <th>albumId</th>
+      <th>id</th>
+      <th>title</th>
+      <th>url</th>
+      <th>thumbnailUrl</th>
+    </tr>
+  <tbody  *ngFor="let data of data2; let i=index">
+        <tr *ngIf="i<5">
+      <td>{{data.albumId}}</td>
+      <td>{{data.id}}</td>
+      <td>{{data.title}}</td>
+      <td>{{data.url}}</td>
+      <td>{{data.thumbnailUrl}}</td>
+      <td> <img src="{{data.thumbnailUrl}}" height="120%" width="160%"></td>
+    </tr></tbody>
+      </table>
+      <button (click)="Fetchdata()">get</button>
+      <a [routerLink]="['/albums']">
+        <button>Back To Albums</button>
+      </a>
+      

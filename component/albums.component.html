@@ -1,0 +1,19 @@
+
+<h2>My albums Services</h2>
+<table border="1px">
+  <tr>
+      <th>userId</th>
+      <th>id</th>
+      <th>title</th>
+  </tr>
+  <tbody  *ngFor="let data of data2;">
+    <tr>
+      <td>{{data.userId}}</td>
+      <td>{{data.id}}</td>
+      <td>{{data.title}}</td>
+    </tr></tbody>
+      </table>
+      <button (click)="Fetchdata()">get</button>
+      <a [routerLink]="['/users']">
+        <button>Back To User</button>
+      </a>
